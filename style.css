@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Dancing+Script");
 @import url("https://fonts.googleapis.com/css2?family=Courgette&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Marck+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Marck+Script&display=swap");
 @font-face {
   font-family: "christmas-font";
   src: url("./assets/mechanic-of-hearts.ttf");
@@ -245,5 +246,19 @@ h1 {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
   }
+}
+
+.palte-message {
+  font-family: 'Marck Script', cursive;
+  font-size: 60px;
+  color: white;
+  position: absolute;
+  z-index: 10;
+  -webkit-transition: all 0.25s cubic-bezier(1, -0.25, 0.39, 1);
+  transition: all 0.25s cubic-bezier(1, -0.25, 0.39, 1);
+}
+
+.palte-message:hover {
+  font-size: 70px;
 }
 /*# sourceMappingURL=style.css.map */

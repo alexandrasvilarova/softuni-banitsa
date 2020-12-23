@@ -194,3 +194,17 @@ h1{
   from {transform:rotate(0deg);}
   to {transform:rotate(360deg);}
 }
+
+.palte-message {
+  @import url('https://fonts.googleapis.com/css2?family=Marck+Script&display=swap');
+  font-family: 'Marck Script', cursive;
+  font-size: 60px;
+  color: white;
+  position: absolute;
+  z-index: 10;
+  transition: all .25s cubic-bezier(1,-0.25,.39,1);
+
+  &:hover {
+    font-size: 70px;
+  }
+}
