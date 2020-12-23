@@ -1,0 +1,196 @@
+// out: ./style.css, compress: true, sourceMap: false, autoprefixer: last 5 versions, groupmedia: true
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script');
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+
+@font-face {
+  font-family: "christmas-font";
+  src: url("./assets/mechanic-of-hearts.ttf");
+}
+body{
+  margin: 0;
+  padding: 0;
+  background: #00aeef;
+  background: url('./images/fon.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+.sign{
+  height: 150px;
+
+  .col-12{
+    height: 100%;
+    
+    img{
+      height: 100%;
+    }
+  }
+}
+.wooden-sign{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  top: -20px;
+  margin: 0 auto;
+  min-height: 200px;
+  filter: drop-shadow(1px 3px 2px rgb(0, 0, 0));
+}
+
+#particles-js{
+  position: absolute;
+  z-index: -100;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.table{
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: -10;
+  width: 100%;
+  filter: drop-shadow(1px 3px 2px rgb(0, 0, 0));
+  // transform: rotateZ(90deg);
+}
+h1{
+  font-size: 55px;
+  color: white;
+  background-color: red;
+  padding: 0px 50px 5px;
+  border-radius: 20px;
+  margin: 0;
+  box-shadow: 0px 3px 3px 0px rgba(17, 17, 17, 0.85);
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+.plate-wrap{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  .plate{
+    filter: drop-shadow(5px 5px 5px rgb(0, 0, 0));
+  }
+  .banitsa{
+    position: absolute;
+    width: 100%;
+    padding: 5px;
+    filter: drop-shadow(1px 1px 10px rgb(0, 0, 0));
+  }
+  .animated{
+    animation-name: spin;
+    animation-duration: 2s;
+    animation-timing-function: cubic-bezier(.99,-0.25,.39,1.01);
+  }
+}
+.luck-btn{
+  font-family: 'christmas-font', serif;
+  z-index: 200;
+  margin: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 35px;
+  transition: width .2s ease-in-out;
+  width: 45%;
+
+  &:hover{
+    cursor: pointer;
+    width: 50%;
+  }
+  // p{
+  //   margin: 0;
+  //   text-shadow: 2px 2px #ce0000;
+  // }
+  // @media (min-width:425px){
+  //   font-size: 40px;
+  // }
+  // @media (min-width:768px){
+  //   font-size: 35px;
+  // }
+  // @media (min-width:992px){
+  //   font-size: 45px;
+  // }
+  // @media (min-width:1200px){
+  //   font-size: 55px;
+  // }
+}
+.paper-popup{
+  display: none;
+  position: absolute;
+  max-width: 90%;
+  left: 0;
+  right: 0;
+  top:10%;
+  margin-left: auto;
+  margin-right:  auto;
+  z-index: 1000;
+  font-size: 16px;
+  font-size: 2.5vh;
+
+
+  @media (min-width:768px){
+    max-width: 50%;
+    font-size: 3vh;
+  }
+  @media (min-width:1200px){
+    font-size: 4vh;
+  }
+  .popup-message{
+    @import url('https://fonts.googleapis.com/css2?family=Marck+Script&display=swap');
+    font-family: 'Marck Script', cursive;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    margin-left: auto;
+    margin-right:  auto;
+    text-align: center;
+    font-weight: 700;
+    margin: 0;
+  }
+  .popup-btn{
+    font-family: 'Courgette', cursive;
+    color: white;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    text-decoration: underline;
+    font-size: 20px;
+    top: unset;
+    bottom: 0;
+  }
+  img{
+    width: 100%;
+  }
+}
+.right-col{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  img{
+    filter: drop-shadow(2px 2px 0px rgba(0, 0, 0, 0.836));
+  }
+}
+.backdrop{
+  display: none;
+  background: rgba(0,0,0,0.65);
+  position: fixed;
+  top: 0;
+  left:0;
+  bottom: 0;
+  right: 0;
+  backdrop-filter: blur(5px);
+  z-index: 999;
+  opacity: 0;
+}
+@keyframes spin {
+  from {transform:rotate(0deg);}
+  to {transform:rotate(360deg);}
+}

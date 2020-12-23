@@ -1,0 +1,249 @@
+@import url("https://fonts.googleapis.com/css?family=Dancing+Script");
+@import url("https://fonts.googleapis.com/css2?family=Courgette&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Marck+Script&display=swap");
+@font-face {
+  font-family: "christmas-font";
+  src: url("./assets/mechanic-of-hearts.ttf");
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #00aeef;
+  background: url("./images/fon.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.sign {
+  height: 150px;
+}
+
+.sign .col-12 {
+  height: 100%;
+}
+
+.sign .col-12 img {
+  height: 100%;
+}
+
+.wooden-sign {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  top: -20px;
+  margin: 0 auto;
+  min-height: 200px;
+  -webkit-filter: drop-shadow(1px 3px 2px black);
+          filter: drop-shadow(1px 3px 2px black);
+}
+
+#particles-js {
+  position: absolute;
+  z-index: -100;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.table {
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: -10;
+  width: 100%;
+  -webkit-filter: drop-shadow(1px 3px 2px black);
+          filter: drop-shadow(1px 3px 2px black);
+}
+
+h1 {
+  font-size: 55px;
+  color: white;
+  background-color: red;
+  padding: 0px 50px 5px;
+  border-radius: 20px;
+  margin: 0;
+  -webkit-box-shadow: 0px 3px 3px 0px rgba(17, 17, 17, 0.85);
+          box-shadow: 0px 3px 3px 0px rgba(17, 17, 17, 0.85);
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.plate-wrap {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+}
+
+.plate-wrap .plate {
+  -webkit-filter: drop-shadow(5px 5px 5px black);
+          filter: drop-shadow(5px 5px 5px black);
+}
+
+.plate-wrap .banitsa {
+  position: absolute;
+  width: 100%;
+  padding: 5px;
+  -webkit-filter: drop-shadow(1px 1px 10px black);
+          filter: drop-shadow(1px 1px 10px black);
+}
+
+.plate-wrap .animated {
+  -webkit-animation-name: spin;
+          animation-name: spin;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-timing-function: cubic-bezier(0.99, -0.25, 0.39, 1.01);
+          animation-timing-function: cubic-bezier(0.99, -0.25, 0.39, 1.01);
+}
+
+.luck-btn {
+  font-family: 'christmas-font', serif;
+  z-index: 200;
+  margin: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: white;
+  font-size: 35px;
+  -webkit-transition: width .2s ease-in-out;
+  transition: width .2s ease-in-out;
+  width: 45%;
+}
+
+.luck-btn:hover {
+  cursor: pointer;
+  width: 50%;
+}
+
+.paper-popup {
+  display: none;
+  position: absolute;
+  max-width: 90%;
+  left: 0;
+  right: 0;
+  top: 10%;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 1000;
+  font-size: 16px;
+  font-size: 2.5vh;
+}
+
+@media (min-width: 768px) {
+  .paper-popup {
+    max-width: 50%;
+    font-size: 3vh;
+  }
+}
+
+@media (min-width: 1200px) {
+  .paper-popup {
+    font-size: 4vh;
+  }
+}
+
+.paper-popup .popup-message {
+  font-family: 'Marck Script', cursive;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-weight: 700;
+  margin: 0;
+}
+
+.paper-popup .popup-btn {
+  font-family: 'Courgette', cursive;
+  color: white;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  text-decoration: underline;
+  font-size: 20px;
+  top: unset;
+  bottom: 0;
+}
+
+.paper-popup img {
+  width: 100%;
+}
+
+.right-col {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.right-col img {
+  -webkit-filter: drop-shadow(2px 2px 0px rgba(0, 0, 0, 0.836));
+          filter: drop-shadow(2px 2px 0px rgba(0, 0, 0, 0.836));
+}
+
+.backdrop {
+  display: none;
+  background: rgba(0, 0, 0, 0.65);
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  z-index: 999;
+  opacity: 0;
+}
+
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+/*# sourceMappingURL=style.css.map */
