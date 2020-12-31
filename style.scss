@@ -1,6 +1,7 @@
 // out: ./style.css, compress: true, sourceMap: false, autoprefixer: last 5 versions, groupmedia: true
 @import url('https://fonts.googleapis.com/css?family=Dancing+Script');
 @import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Marck+Script&display=swap');
 
 @font-face {
   font-family: "christmas-font";
@@ -141,7 +142,6 @@ h1{
     font-size: 4vh;
   }
   .popup-message{
-    @import url('https://fonts.googleapis.com/css2?family=Marck+Script&display=swap');
     font-family: 'Marck Script', cursive;
     position: absolute;
     top: 40%;
@@ -196,15 +196,28 @@ h1{
 }
 
 .palte-message {
-  @import url('https://fonts.googleapis.com/css2?family=Marck+Script&display=swap');
   font-family: 'Marck Script', cursive;
-  font-size: 60px;
+  font-size: 45px;
   color: white;
   position: absolute;
   z-index: 10;
   transition: all .25s cubic-bezier(1,-0.25,.39,1);
 
   &:hover {
-    font-size: 70px;
+    font-size: 50px;
+  }
+  &:active, &:focus {
+    font-size: 45px;
+  }
+
+  @media (min-width: 768px){
+    font-size: 60px;
+
+    &:hover {
+      font-size: 70px;
+    }
+    &:active, &:focus {
+      font-size: 60px;
+    }
   }
 }
